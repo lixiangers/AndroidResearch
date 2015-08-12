@@ -15,8 +15,8 @@ public class LoadMethodEx {
             // 利用newInstance()方法，获取构造方法的实例
             // Class的newInstance方法只提供默认无参构造实例
             // Constructor的newInstance方法提供带参的构造实例
-            Constructor ct = cls.getConstructor(null);
-            Object obj = ct.newInstance(null);
+            Constructor ct = cls.getConstructor();
+            Object obj = ct.newInstance();
             //Object obj = cls.newInstance();
 
             // 根据方法名获取指定方法的参数类型列表
