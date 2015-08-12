@@ -1,4 +1,4 @@
-package com.lixiangers.androidresearch;
+package com.lixiangers.androidresearch.Reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -8,11 +8,6 @@ import java.lang.reflect.Modifier;
 
 public class ReflectionTestMain {
     public static void main(String[] args) {
-//        double lat = 39.928774689792;
-//        double lng = 116.46697203776;
-//        LatLng latLng = MapUtil.bdToGD(lat, lng);
-//        Log.d("MapTest", "lat:" + latLng.latitude + " lng:" + latLng.longitude);
-
 
         ReflectionTest r = new ReflectionTest();
         Class temp = r.getClass();
@@ -42,7 +37,7 @@ public class ReflectionTestMain {
 
         //        ------------------------------------------方法------------------------------------------------------------------------
  /*
-         * Note: 方法getDeclaredMethods()只能获取到由当前类定义的所有方法，不能获取从父类继承的方法 ,但是可以获取到静态的方法
+         * Note: 方法getDeclaredMethods()只能获取到由当前类定义的所有方法 包括private，不能获取从父类继承的方法 ,但是可以获取到静态的方法
          *       方法getMethods() 不仅能获取到当前类定义的public方法，也能得到从父类继承和已经实现接口的public方法，不能获取到静态的方法
          * 请查阅开发文档对这两个方法的详细描述。
          */
@@ -117,5 +112,24 @@ public class ReflectionTestMain {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
+        //        ------------------------------------------实际调用------------------------------------------------------------------------
+        //属性 获取值以及赋值
+        try {
+            Field field = temp.getDeclaredField("bInt");
+            field.setAccessible(true);
+            System.out.println("赋值之前的值=" + field.get(r));
+            field.set(r, 100);
+            System.out.println("赋值之后的值=" + field.get(r));
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        //方法
+        LoadMethodEx methodEx = new LoadMethodEx();
+        System.out.println(methodEx.Load(temp.getName(), "abc", new Object[]{1, "lixiangTest"}));
     }
 }

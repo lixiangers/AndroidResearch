@@ -1,4 +1,4 @@
-package com.lixiangers.androidresearch;
+package com.lixiangers.androidresearch.Reflection;
 
 import android.view.View;
 
@@ -22,9 +22,9 @@ public class ReflectionTest extends Object implements View.OnClickListener, Seri
     }
 
     // 成员方法
-    public int abc(int id, String name) {
+    private int abc(int id, String name) {
         System.out.println("crazypebble ---> " + id + "-" + name);
-        return 0;
+        return 123;
     }
 
     protected static void edf() {
