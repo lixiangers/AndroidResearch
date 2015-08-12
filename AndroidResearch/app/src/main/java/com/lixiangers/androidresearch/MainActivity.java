@@ -5,14 +5,25 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.lixiangers.androidresearch.Device.DeviceUtils;
 
 
 public class MainActivity extends Activity {
+    public static String TAG="AndroidResearch";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.bt_expand_notification).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DeviceUtils.OpenNotify(getApplication());
+            }
+        });
     }
 
 
