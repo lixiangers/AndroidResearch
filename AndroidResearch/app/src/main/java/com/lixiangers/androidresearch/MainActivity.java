@@ -1,6 +1,7 @@
 package com.lixiangers.androidresearch;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,7 +12,7 @@ import com.lixiangers.androidresearch.Device.DeviceUtils;
 
 
 public class MainActivity extends Activity {
-    public static String TAG="AndroidResearch";
+    public static String TAG = "AndroidResearch";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 DeviceUtils.OpenNotify(getApplication());
+            }
+        });
+
+        findViewById(R.id.bt_test_empty_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), TestEmptyViewActivity.class));
             }
         });
     }

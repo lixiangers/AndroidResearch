@@ -1,0 +1,13 @@
+<resources>
+
+    <declare-styleable name="EmptyView">
+        <attr name="emptyText" format="string|reference" />
+        <attr name="buttonText" format="string|reference" />
+        <attr name="loadingText" format="string|reference" />
+        <!--<attr name="position">-->
+        <!--<enum name="top" value="0" />-->
+        <!--<enum name="middle" value="1" />-->
+        <!--<enum name="bottom" value="2" />-->
+        <!--</attr>-->
+    </declare-styleable>
+</resources>
