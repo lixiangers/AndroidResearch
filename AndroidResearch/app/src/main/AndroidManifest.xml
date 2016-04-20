@@ -19,7 +19,13 @@
         </activity>
 
         <activity
-            android:name=".TestEmptyViewActivity"
+            android:name=".feature.TestEmptyViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Device.OpenNotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reflection.ReflecationTestActivity"
             android:screenOrientation="portrait" />
     </application>
 

@@ -1,13 +1,17 @@
 package com.lixiangers.androidresearch.Reflection;
 
+import android.app.Activity;
+import android.os.Bundle;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
-
-public class ReflectionTestMain {
-    public static void main(String[] args) {
+public class ReflecationTestActivity extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         ReflectionTest r = new ReflectionTest();
         Class temp = r.getClass();

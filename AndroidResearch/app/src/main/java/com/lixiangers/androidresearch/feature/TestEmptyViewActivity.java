@@ -1,10 +1,11 @@
-package com.lixiangers.androidresearch;
+package com.lixiangers.androidresearch.feature;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.TextView;
 
+import com.lixiangers.androidresearch.R;
 import com.lixiangers.androidresearch.view.EmptyView;
 
 import java.util.Random;
