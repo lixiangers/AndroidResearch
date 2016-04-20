@@ -27,6 +27,16 @@
         <activity
             android:name=".Reflection.ReflecationTestActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".feature.AIDLActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".service.AIDLService" android:process=":aidlservice">
+            <intent-filter>
+                <action android:name="com.lixiangers.androidresearch.aidl.AIDLTestService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

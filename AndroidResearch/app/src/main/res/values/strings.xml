@@ -6,4 +6,5 @@
     <string name="empty">独立的EmptyView可以设置给View(常见ListView)</string>
     <string name="openNotification">展开通知栏</string>
     <string name="reflecation">反射测试</string>
+    <string name="aidl">AIDL-Test</string>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.lixiangers.androidresearch.Device.OpenNotificationActivity;
 import com.lixiangers.androidresearch.Reflection.ReflecationTestActivity;
+import com.lixiangers.androidresearch.feature.AIDLActivity;
 import com.lixiangers.androidresearch.feature.TestEmptyViewActivity;
 
 
@@ -21,7 +22,9 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.openNotification, R.string.openNotification,
                     OpenNotificationActivity.class),
             new DemoDetails(R.string.reflecation, R.string.reflecation,
-                    ReflecationTestActivity.class)
+                    ReflecationTestActivity.class),
+            new DemoDetails(R.string.aidl, R.string.aidl,
+                    AIDLActivity.class)
     };
 
     @Override
