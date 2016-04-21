@@ -5,15 +5,27 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/bt_bind_service"
+        android:id="@+id/bt_start"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="bind remote service" />
+        android:text="start gray service" />
+
+    <Button
+        android:id="@+id/bt_bind"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="bind service" />
 
 
     <Button
         android:id="@+id/bt_unbind"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="unbind remote service" />
+        android:text="unbind service" />
+
+    <Button
+        android:id="@+id/bt_stop"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="stop service" />
 </LinearLayout>

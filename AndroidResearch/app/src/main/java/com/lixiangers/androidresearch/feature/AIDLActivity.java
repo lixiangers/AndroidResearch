@@ -34,7 +34,21 @@ public class AIDLActivity extends Activity {
                     }
                 }
         );
+
+        findViewById(R.id.bt_unbind).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                unbindService(mConnection);
+            }
+        });
     }
+
+    private IBinder.DeathRecipient mGrayBinderDeathRecipient = new IBinder.DeathRecipient() {
+        @Override
+        public void binderDied() { //进程死亡或者Binder键发生断裂会产生回调
+            Log.d(TAG, "binderDied");
+        }
+    };
 
 
     private ITestService mService;
@@ -43,6 +57,7 @@ public class AIDLActivity extends Activity {
             Log.d(TAG, "connect service");
             mService = ITestService.Stub.asInterface(service);
             try {
+                service.linkToDeath(mGrayBinderDeathRecipient, 0);
                 Person person = mService.getPerson();
                 Toast.makeText(getApplicationContext(), "Person:" + person.getName(), Toast.LENGTH_SHORT).show();
             } catch (RemoteException e) {
@@ -53,13 +68,18 @@ public class AIDLActivity extends Activity {
 
         public void onServiceDisconnected(ComponentName className) {
             Log.d(TAG, "disconnect service");
+            mService.asBinder().unlinkToDeath(mGrayBinderDeathRecipient, 0);
             mService = null;
         }
     };
 
     @Override
     protected void onDestroy() {
-        unbindService(mConnection);
+        try {
+            unbindService(mConnection);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         super.onDestroy();
     }
 }

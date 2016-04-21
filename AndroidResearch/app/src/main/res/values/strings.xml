@@ -7,4 +7,5 @@
     <string name="openNotification">展开通知栏</string>
     <string name="reflecation">反射测试</string>
     <string name="aidl">AIDL-Test</string>
+    <string name="gray_service">利用灰色技术实现前台service但是又不显示在通知栏</string>
 </resources>

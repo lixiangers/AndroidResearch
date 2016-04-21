@@ -32,11 +32,22 @@
             android:name=".feature.AIDLActivity"
             android:screenOrientation="portrait" />
 
-        <service android:name=".service.AIDLService" android:process=":aidlservice">
+        <activity
+            android:name=".feature.GrayServiceActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.AIDLService"
+            android:process=":aidlservice">
             <intent-filter>
                 <action android:name="com.lixiangers.androidresearch.aidl.AIDLTestService" />
             </intent-filter>
         </service>
+
+        <service
+            android:name=".service.AIDLService$GrayInnerService"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>

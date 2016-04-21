@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.lixiangers.androidresearch.Device.OpenNotificationActivity;
 import com.lixiangers.androidresearch.Reflection.ReflecationTestActivity;
 import com.lixiangers.androidresearch.feature.AIDLActivity;
+import com.lixiangers.androidresearch.feature.GrayServiceActivity;
 import com.lixiangers.androidresearch.feature.TestEmptyViewActivity;
 
 
@@ -24,7 +25,9 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.reflecation, R.string.reflecation,
                     ReflecationTestActivity.class),
             new DemoDetails(R.string.aidl, R.string.aidl,
-                    AIDLActivity.class)
+                    AIDLActivity.class),
+            new DemoDetails(R.string.gray_service, R.string.gray_service,
+                    GrayServiceActivity.class)
     };
 
     @Override
