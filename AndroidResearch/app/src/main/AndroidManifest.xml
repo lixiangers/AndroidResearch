@@ -3,6 +3,7 @@
     package="com.lixiangers.androidresearch">
 
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,6 +35,11 @@
 
         <activity
             android:name=".feature.GrayServiceActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".feature.PhoneNumberActivity"
             android:screenOrientation="portrait" />
 
         <service

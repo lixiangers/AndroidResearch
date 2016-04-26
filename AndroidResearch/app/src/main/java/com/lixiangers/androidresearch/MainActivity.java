@@ -11,6 +11,7 @@ import com.lixiangers.androidresearch.Device.OpenNotificationActivity;
 import com.lixiangers.androidresearch.Reflection.ReflecationTestActivity;
 import com.lixiangers.androidresearch.feature.AIDLActivity;
 import com.lixiangers.androidresearch.feature.GrayServiceActivity;
+import com.lixiangers.androidresearch.feature.PhoneNumberActivity;
 import com.lixiangers.androidresearch.feature.TestEmptyViewActivity;
 
 
@@ -27,7 +28,9 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.aidl, R.string.aidl,
                     AIDLActivity.class),
             new DemoDetails(R.string.gray_service, R.string.gray_service,
-                    GrayServiceActivity.class)
+                    GrayServiceActivity.class),
+            new DemoDetails(R.string.phone_number, R.string.phone_number,
+                    PhoneNumberActivity.class)
     };
 
     @Override
