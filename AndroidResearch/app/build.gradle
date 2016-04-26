@@ -24,7 +24,8 @@ android {
             java.srcDirs = ['src/main/java', "src/main/aidl"]
         }
     }
-    compileOptions {
+
+    compileOptions {//设置 language level
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
@@ -36,5 +37,9 @@ dependencies {
 }
 
 retrolambda {
-    javaVersion JavaVersion.VERSION_1_7
+    //指定java8的路径,因为我们项目还是使用Java7，而lambda需要java8。所以这里必须要指定Java8的路径，否则编译出错。
+    jdk System.getenv("JAVA8_HOME")
+    //默认就从环境变量中读取，可以不用单独设置。这里为了体现和上面jdk的区别。
+    oldJdk System.getenv("JAVA_HOME")
+    javaVersion JavaVersion.VERSION_1_7//设置retrolambda编译版本
 }
