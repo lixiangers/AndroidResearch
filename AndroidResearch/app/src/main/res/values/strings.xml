@@ -10,4 +10,5 @@
     <string name="gray_service">利用灰色技术实现不在通知栏栏显示的前台Service</string>
     <string name="phone_number">查看电话号码</string>
     <string name="lambda">lambda表达式</string>
+    <string name="test_launch">测试各种Launch mode</string>
 </resources>
