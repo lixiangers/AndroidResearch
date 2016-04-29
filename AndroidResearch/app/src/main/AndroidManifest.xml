@@ -47,8 +47,13 @@
             android:name=".feature.LambdaActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".feature.TestLauncherModeActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".feature.TestLauncherModeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".feature.SoftWeakPhantomReference"
+            android:screenOrientation="portrait" />
 
         <service
             android:name=".service.AIDLService"

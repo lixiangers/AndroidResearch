@@ -13,6 +13,7 @@ import com.lixiangers.androidresearch.feature.AIDLActivity;
 import com.lixiangers.androidresearch.feature.GrayForegroundServiceActivity;
 import com.lixiangers.androidresearch.feature.LambdaActivity;
 import com.lixiangers.androidresearch.feature.PhoneNumberActivity;
+import com.lixiangers.androidresearch.feature.SoftWeakPhantomReference;
 import com.lixiangers.androidresearch.feature.TestEmptyViewActivity;
 import com.lixiangers.androidresearch.feature.TestLauncherModeActivity;
 
@@ -36,7 +37,9 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.lambda, R.string.lambda,
                     LambdaActivity.class),
             new DemoDetails(R.string.test_launch, R.string.test_launch,
-                    TestLauncherModeActivity.class)
+                    TestLauncherModeActivity.class),
+            new DemoDetails(R.string.soft_weak_phantom_reference, R.string.soft_weak_phantom_reference,
+                    SoftWeakPhantomReference.class)
     };
 
     @Override
