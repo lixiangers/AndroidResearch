@@ -12,7 +12,10 @@ import android.view.View;
 import com.lixiangers.androidresearch.R;
 import com.lixiangers.androidresearch.service.AIDLService;
 
-public class GrayServiceActivity extends Activity {
+/**
+ * 通过灰色技术实现不在通知栏显示的前台Service
+ */
+public class GrayForegroundServiceActivity extends Activity {
 
     private ServiceConnection conn;
 

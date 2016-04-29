@@ -8,6 +8,9 @@ import android.view.View;
 
 import com.lixiangers.androidresearch.R;
 
+/**
+ * 测试各种Launch mode的Task分布
+ */
 public class TestLauncherModeActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

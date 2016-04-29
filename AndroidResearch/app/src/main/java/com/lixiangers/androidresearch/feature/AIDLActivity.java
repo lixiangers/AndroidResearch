@@ -17,6 +17,9 @@ import com.lixiangers.androidresearch.aidl.ITestService;
 import com.lixiangers.androidresearch.aidl.Person;
 import com.lixiangers.androidresearch.service.AIDLService;
 
+/**
+ * 演示AIDL的使用 注意 linkToDeath unlinkToDeath 使用
+ */
 public class AIDLActivity extends Activity {
     private static final String TAG = "AIDLService";
 

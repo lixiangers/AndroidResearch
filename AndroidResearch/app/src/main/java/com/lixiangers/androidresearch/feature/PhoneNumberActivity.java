@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.widget.Toast;
 
+/**
+ * 获取电话号码
+ */
 public class PhoneNumberActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

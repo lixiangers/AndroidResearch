@@ -10,6 +10,9 @@ import com.lixiangers.androidresearch.view.EmptyView;
 
 import java.util.Random;
 
+/**
+ * 独立的Empty view,可以赋值给任何View
+ */
 public class TestEmptyViewActivity extends Activity {
 
     private EmptyView mEmptyView;

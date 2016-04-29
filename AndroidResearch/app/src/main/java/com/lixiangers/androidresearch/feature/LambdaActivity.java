@@ -7,6 +7,9 @@ import android.widget.Toast;
 import com.android.internal.util.Predicate;
 import com.lixiangers.androidresearch.R;
 
+/**
+ *  retrolambda Lambda 演示
+ */
 public class LambdaActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

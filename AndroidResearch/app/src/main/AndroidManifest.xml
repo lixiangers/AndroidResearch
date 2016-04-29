@@ -35,7 +35,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".feature.GrayServiceActivity"
+            android:name=".feature.GrayForegroundServiceActivity"
             android:screenOrientation="portrait" />
 
 
