@@ -1,6 +1,10 @@
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
 
+//nuwa {
+//    debugOn = false
+//}
+
 android {
     compileSdkVersion 22
     buildToolsVersion "23.0.0 rc3"
@@ -12,9 +16,22 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    signingConfigs {
+        myConfig {
+            storeFile file("keystore.jks")      //签名文件
+            storePassword "123456"
+            keyAlias "LeeThink"
+            keyPassword "123456"  //签名密码
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.myConfig
+            zipAlignEnabled true
+            shrinkResources true // 是否去除无效的资源文件
+            minifyEnabled true   //是否混淆
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
