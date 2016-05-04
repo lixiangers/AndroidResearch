@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.lixiangers.androidresearch.Device.OpenNotificationActivity;
 import com.lixiangers.androidresearch.Reflection.ReflecationTestActivity;
@@ -50,6 +51,11 @@ public class MainActivity extends ListActivity {
         ListAdapter adapter = new CustomArrayAdapter(
                 this.getApplicationContext(), demos);
         setListAdapter(adapter);
+        testFix();
+    }
+
+    private void testFix() {
+        Toast.makeText(getApplication(), "before fix", Toast.LENGTH_SHORT).show();
     }
 
     @Override
