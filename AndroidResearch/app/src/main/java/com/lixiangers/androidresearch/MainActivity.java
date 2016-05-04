@@ -51,6 +51,11 @@ public class MainActivity extends ListActivity {
         ListAdapter adapter = new CustomArrayAdapter(
                 this.getApplicationContext(), demos);
         setListAdapter(adapter);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         testFix();
     }
 

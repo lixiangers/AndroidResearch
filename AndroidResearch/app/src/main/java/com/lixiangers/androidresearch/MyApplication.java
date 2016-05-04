@@ -19,7 +19,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         patchManager = new PatchManager(this);
-        patchManager.init("1.0");
+        patchManager.init("2.0");
         // load patch
         patchManager.loadPatch();
         // add patch at runtime
