@@ -11,12 +11,14 @@ import android.widget.Toast;
 import com.lixiangers.androidresearch.Device.OpenNotificationActivity;
 import com.lixiangers.androidresearch.Reflection.ReflecationTestActivity;
 import com.lixiangers.androidresearch.feature.AIDLActivity;
+import com.lixiangers.androidresearch.feature.CopyOnWriteArrayListActivity;
 import com.lixiangers.androidresearch.feature.GrayForegroundServiceActivity;
 import com.lixiangers.androidresearch.feature.LambdaActivity;
 import com.lixiangers.androidresearch.feature.PhoneNumberActivity;
 import com.lixiangers.androidresearch.feature.SoftWeakPhantomReference;
 import com.lixiangers.androidresearch.feature.TestEmptyViewActivity;
 import com.lixiangers.androidresearch.feature.TestLauncherModeActivity;
+import com.lixiangers.androidresearch.feature.TransientKeyWordActivity;
 
 
 public class MainActivity extends ListActivity {
@@ -40,7 +42,11 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.test_launch, R.string.test_launch,
                     TestLauncherModeActivity.class),
             new DemoDetails(R.string.soft_weak_phantom_reference, R.string.soft_weak_phantom_reference,
-                    SoftWeakPhantomReference.class)
+                    SoftWeakPhantomReference.class),
+            new DemoDetails(R.string.copy_on_write_array_list, R.string.copy_on_write_array_list,
+                    CopyOnWriteArrayListActivity.class),
+            new DemoDetails(R.string.transient_key_word, R.string.transient_key_word,
+                    TransientKeyWordActivity.class)
     };
 
     @Override

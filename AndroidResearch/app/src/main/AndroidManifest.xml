@@ -58,6 +58,14 @@
             android:name=".feature.SoftWeakPhantomReference"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".feature.CopyOnWriteArrayListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".feature.TransientKeyWordActivity"
+            android:screenOrientation="portrait" />
+
         <service
             android:name=".service.AIDLService"
             android:process=":aidlservice">
