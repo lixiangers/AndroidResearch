@@ -66,6 +66,10 @@
             android:name=".feature.TransientKeyWordActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".feature.ThreadLocalTestActivity"
+            android:screenOrientation="portrait" />
+
         <service
             android:name=".service.AIDLService"
             android:process=":aidlservice">

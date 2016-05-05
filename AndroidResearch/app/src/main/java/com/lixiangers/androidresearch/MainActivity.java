@@ -18,6 +18,7 @@ import com.lixiangers.androidresearch.feature.PhoneNumberActivity;
 import com.lixiangers.androidresearch.feature.SoftWeakPhantomReference;
 import com.lixiangers.androidresearch.feature.TestEmptyViewActivity;
 import com.lixiangers.androidresearch.feature.TestLauncherModeActivity;
+import com.lixiangers.androidresearch.feature.ThreadLocalTestActivity;
 import com.lixiangers.androidresearch.feature.TransientKeyWordActivity;
 
 
@@ -46,7 +47,9 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.copy_on_write_array_list, R.string.copy_on_write_array_list,
                     CopyOnWriteArrayListActivity.class),
             new DemoDetails(R.string.transient_key_word, R.string.transient_key_word,
-                    TransientKeyWordActivity.class)
+                    TransientKeyWordActivity.class),
+            new DemoDetails(R.string.thread_local_test, R.string.thread_local_test,
+                    ThreadLocalTestActivity.class)
     };
 
     @Override

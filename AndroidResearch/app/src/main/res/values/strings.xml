@@ -14,4 +14,5 @@
     <string name="soft_weak_phantom_reference">测试Soft,Weak,Phantom Reference</string>
     <string name="copy_on_write_array_list">CopyOnWriteArraylist和ArrayList在多线程读写的差别</string>
     <string name="transient_key_word">transient 关键字不能序列化</string>
+    <string name="thread_local_test">测试 ThreadLocal</string>
 </resources>
