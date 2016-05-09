@@ -15,4 +15,5 @@
     <string name="copy_on_write_array_list">CopyOnWriteArraylist和ArrayList在多线程读写的差别</string>
     <string name="transient_key_word">transient 关键字不能序列化</string>
     <string name="thread_local_test">测试 ThreadLocal</string>
+    <string name="instance_assignable_from_test">测试Instance,Assignable From</string>
 </resources>
