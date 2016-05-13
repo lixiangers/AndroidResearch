@@ -16,4 +16,5 @@
     <string name="transient_key_word">transient 关键字不能序列化</string>
     <string name="thread_local_test">测试 ThreadLocal</string>
     <string name="instance_assignable_from_test">测试Instance,Assignable From</string>
+    <string name="ndk_test">NDK demo</string>
 </resources>

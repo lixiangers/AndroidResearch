@@ -74,6 +74,10 @@
             android:name=".feature.InstanceOfAssignableTest"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".feature.NDKTestActivity"
+            android:screenOrientation="portrait" />
+
         <service
             android:name=".service.AIDLService"
             android:process=":aidlservice">

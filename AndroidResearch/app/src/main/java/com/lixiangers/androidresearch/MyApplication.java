@@ -22,7 +22,7 @@ public class MyApplication extends Application {
         patchManager.init("2.0");
         // load patch
         patchManager.loadPatch();
-        // add patch at runtime
+//         add patch at runtime
         try {
             // .apatch file path
             String patchFileString = Environment.getExternalStorageDirectory().getAbsolutePath().concat(APATCH_PATH);

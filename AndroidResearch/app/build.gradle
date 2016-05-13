@@ -16,6 +16,12 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled = true
+
+        ndk {
+            moduleName "NdkJniDemo"            //生成的so名字 libNdkJniDemo
+//            ldLibs "log", "z", "m"	//添加依赖库文件，因为有log打印等
+            abiFilters "armeabi", "x86"//输出指定abi体系结构下的so库。
+        }
     }
 
     signingConfigs {
