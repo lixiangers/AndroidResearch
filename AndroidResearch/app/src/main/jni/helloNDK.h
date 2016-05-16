@@ -13,7 +13,15 @@ extern "C" {
  * Signature: ()Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_getStringFormC
-        (JNIEnv *, jclass);
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     com_lixiangers_androidresearch_feature_NDKUtil
+ * Method:    test
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_test
+  (JNIEnv *, jclass);
 
 #ifdef __cplusplus
 }

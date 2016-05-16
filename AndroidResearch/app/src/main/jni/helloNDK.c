@@ -2,7 +2,7 @@
 // Created by lx on 2016/5/13.
 //
 
-#include "com_lixiangers_androidresearch_feature_NDKUtil.h"
+#include "helloNDK.h"
 #include <string.h>
 
 JNIEXPORT jstring JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_getStringFormC(JNIEnv* env, jobject obj) {
