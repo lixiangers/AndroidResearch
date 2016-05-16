@@ -27,5 +27,9 @@ public class NDKTestActivity extends Activity {
         findViewById(R.id.bt_c_call_java_3).setOnClickListener(v -> {
             new NDKUtil().cCallFromMethod3();
         });
+
+        findViewById(R.id.bt_c_call_java_4).setOnClickListener(v -> {
+            new NDKUtil().cCallFromMethod4();
+        });
     }
 }

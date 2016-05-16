@@ -9,6 +9,8 @@ public class NDKUtil {
 
     public native void cCallFromMethod3();
 
+    public native void cCallFromMethod4();
+
     static {
         System.loadLibrary("NdkJniDemo");
     }
@@ -29,5 +31,13 @@ public class NDKUtil {
     //C调用java中参数为string的方法
     public void Method3(String s) {
         System.out.println("Method3:" + s);
+    }
+
+    //C调用static方法
+    public static String Method4(String s1, String s2) {
+        String result = "";
+        result = s1 + s2 + s2;
+        System.out.println("Method4: result=" + result);
+        return result;
     }
 }

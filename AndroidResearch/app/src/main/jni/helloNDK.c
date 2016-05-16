@@ -109,5 +109,40 @@ JNIEXPORT void JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_cCall
     LOGI("after call method");
 }
 
+JNIEXPORT void JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_cCallFromMethod4
+        (JNIEnv *env, jobject obj) {
+//调用DataProvider对象中的helloFromJava()方法
+    //获取到某个对象, 获取对象中的方法, 调用获取到的方法
+    LOGI("in code");
+    //NDKUtil com_lixiangers_androidresearch_feature_NDKUtil
+    char *classname = "com/lixiangers/androidresearch/feature/NDKUtil";
+
+
+    jclass dpclazz = (*env)->FindClass(env, classname);
+    if (dpclazz == 0)
+        LOGI("class not find !!!");
+    else
+        LOGI("class find !!!");
+
+    //参数介绍 : 第二个参数是Class对象, 第三个参数是方法名,第四个参数是方法的签名, 获取到调用的method
+    jmethodID methodID = (*env)->GetStaticMethodID(env, dpclazz, "Method4",
+                                                   "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;");
+    if (methodID == 0)
+        LOGI("method not find !!!");
+    else
+        LOGI("method find !!!");
+
+    /*
+     * 调用方法 void (*CallStaticVoidMethod)(JNIEnv*, jclass, jmethodID, ...);
+     * jclass 前面find的class
+     * 参数介绍 : 后面的 ... 是可变参数, 如果该返回值void的方法有参数, 就将参数按照次序排列
+     */
+    LOGI("before call method");
+    (*env)->CallStaticObjectMethod(env, dpclazz, methodID,
+                                 (*env)->NewStringUTF(env, "String 1"),
+                                 (*env)->NewStringUTF(env, "String 2"));
+    LOGI("after call method");
+}
+
 
 

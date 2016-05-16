@@ -27,4 +27,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="C调用java3" />
+
+    <Button
+        android:id="@+id/bt_c_call_java_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C调用static java method" />
 </LinearLayout>

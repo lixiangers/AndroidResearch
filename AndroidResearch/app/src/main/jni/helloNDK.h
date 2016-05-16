@@ -39,6 +39,14 @@ JNIEXPORT void JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_cCall
 JNIEXPORT void JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_cCallFromMethod3
   (JNIEnv *, jobject);
 
+/*
+ * Class:     com_lixiangers_androidresearch_feature_NDKUtil
+ * Method:    cCallFromMethod4
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_cCallFromMethod4
+  (JNIEnv *, jobject);
+
 #ifdef __cplusplus
 }
 #endif
