@@ -17,11 +17,27 @@ JNIEXPORT jstring JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_ge
 
 /*
  * Class:     com_lixiangers_androidresearch_feature_NDKUtil
- * Method:    test
- * Signature: ()Ljava/lang/String;
+ * Method:    cCallFromMethod1
+ * Signature: ()V
  */
-JNIEXPORT jstring JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_test
-  (JNIEnv *, jclass);
+JNIEXPORT void JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_cCallFromMethod1
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     com_lixiangers_androidresearch_feature_NDKUtil
+ * Method:    cCallFromMethod2
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_cCallFromMethod2
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     com_lixiangers_androidresearch_feature_NDKUtil
+ * Method:    cCallFromMethod3
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_lixiangers_androidresearch_feature_NDKUtil_cCallFromMethod3
+  (JNIEnv *, jobject);
 
 #ifdef __cplusplus
 }

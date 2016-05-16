@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="调用C方法" />
+
+    <Button
+        android:id="@+id/bt_c_call_java_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C调用java1" />
+
+    <Button
+        android:id="@+id/bt_c_call_java_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C调用java2" />
+
+    <Button
+        android:id="@+id/bt_c_call_java_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C调用java3" />
+</LinearLayout>
