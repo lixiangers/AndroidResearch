@@ -1,0 +1,3 @@
+[submodule "zkyutil"]
+	path = zkyutil
+	url = git@github.com:zhongkeyun/ZkyUtils.git
