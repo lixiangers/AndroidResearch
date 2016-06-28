@@ -1,0 +1,19 @@
+<com.lixiangers.androidresearch.touchstudy.FirstFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0000">
+
+    <com.lixiangers.androidresearch.touchstudy.SecondRelativeLayout
+        android:layout_width="250dip"
+        android:layout_height="250dip"
+        android:layout_gravity="center"
+        android:background="#00ff00">
+
+        <com.lixiangers.androidresearch.touchstudy.ThirdTextView
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_centerInParent="true"
+            android:background="#0000ff" />
+    </com.lixiangers.androidresearch.touchstudy.SecondRelativeLayout>
+
+</com.lixiangers.androidresearch.touchstudy.FirstFrameLayout>

@@ -22,6 +22,7 @@ import com.lixiangers.androidresearch.feature.TestEmptyViewActivity;
 import com.lixiangers.androidresearch.feature.TestLauncherModeActivity;
 import com.lixiangers.androidresearch.feature.ThreadLocalTestActivity;
 import com.lixiangers.androidresearch.feature.TransientKeyWordActivity;
+import com.lixiangers.androidresearch.touchstudy.StudyTouchActivity;
 
 
 public class MainActivity extends ListActivity {
@@ -55,7 +56,9 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.instance_assignable_from_test, R.string.instance_assignable_from_test,
                     InstanceOfAssignableTest.class),
             new DemoDetails(R.string.ndk_test, R.string.ndk_test,
-                    NDKTestActivity.class)
+                    NDKTestActivity.class),
+            new DemoDetails(R.string.study_touch, R.string.study_touch,
+                    StudyTouchActivity.class)
     };
 
     @Override

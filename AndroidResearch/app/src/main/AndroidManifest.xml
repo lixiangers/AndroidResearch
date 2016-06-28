@@ -78,6 +78,10 @@
             android:name=".feature.NDKTestActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".touchstudy.StudyTouchActivity"
+            android:screenOrientation="portrait" />
+
         <service
             android:name=".service.AIDLService"
             android:process=":aidlservice">
