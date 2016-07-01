@@ -17,6 +17,7 @@ import com.lixiangers.androidresearch.feature.InstanceOfAssignableTest;
 import com.lixiangers.androidresearch.feature.LambdaActivity;
 import com.lixiangers.androidresearch.feature.NDKTestActivity;
 import com.lixiangers.androidresearch.feature.PhoneNumberActivity;
+import com.lixiangers.androidresearch.feature.ScreenOrientationTestActivity;
 import com.lixiangers.androidresearch.feature.SoftWeakPhantomReference;
 import com.lixiangers.androidresearch.feature.TestEmptyViewActivity;
 import com.lixiangers.androidresearch.feature.TestLauncherModeActivity;
@@ -58,7 +59,9 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.ndk_test, R.string.ndk_test,
                     NDKTestActivity.class),
             new DemoDetails(R.string.study_touch, R.string.study_touch,
-                    StudyTouchActivity.class)
+                    StudyTouchActivity.class),
+            new DemoDetails(R.string.screen_orientation, R.string.screen_orientation,
+                    ScreenOrientationTestActivity.class)
     };
 
     @Override

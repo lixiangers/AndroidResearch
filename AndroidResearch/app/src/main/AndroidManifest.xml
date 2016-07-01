@@ -82,6 +82,10 @@
             android:name=".touchstudy.StudyTouchActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".feature.ScreenOrientationTestActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
         <service
             android:name=".service.AIDLService"
             android:process=":aidlservice">
