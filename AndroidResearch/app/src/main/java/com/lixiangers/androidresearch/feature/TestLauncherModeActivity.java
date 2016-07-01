@@ -10,6 +10,7 @@ import com.lixiangers.androidresearch.R;
 
 /**
  * 测试各种Launch mode的Task分布
+ * Affinity 针对 Intent 有FLAG_ACTIVITY_NEW_TASK标记，或者SingleTask类型的Activity 有效果
  */
 public class TestLauncherModeActivity extends Activity implements View.OnClickListener {
     @Override
