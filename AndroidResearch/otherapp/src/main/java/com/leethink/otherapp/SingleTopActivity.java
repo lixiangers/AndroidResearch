@@ -3,8 +3,8 @@ package com.leethink.otherapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 
 public class SingleTopActivity extends AppCompatActivity {
 
@@ -19,5 +19,7 @@ public class SingleTopActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), SingleTopActivity.class));
             }
         });
+
+        Log.d("SingleTopActivity", "onCreate:" + this.toString());
     }
 }
