@@ -7,7 +7,7 @@ apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "23.0.0 rc3"
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.lixiangers.androidresearch"
@@ -15,7 +15,7 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
-        multiDexEnabled = true
+        multiDexEnabled true
 
         ndk {
             moduleName "NdkJniDemo"            //生成的so名字 libNdkJniDemo
