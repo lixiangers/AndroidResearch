@@ -19,4 +19,5 @@
     <string name="ndk_test">NDK demo</string>
     <string name="study_touch">学习touch机制</string>
     <string name="screen_orientation">屏幕方向生命周期</string>
+    <string name="future_task">带返回值的多线程</string>
 </resources>

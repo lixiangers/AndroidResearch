@@ -12,6 +12,7 @@ import com.lixiangers.androidresearch.Device.OpenNotificationActivity;
 import com.lixiangers.androidresearch.Reflection.ReflecationTestActivity;
 import com.lixiangers.androidresearch.feature.AIDLActivity;
 import com.lixiangers.androidresearch.feature.CopyOnWriteArrayListActivity;
+import com.lixiangers.androidresearch.feature.FutureTaskActivity;
 import com.lixiangers.androidresearch.feature.GrayForegroundServiceActivity;
 import com.lixiangers.androidresearch.feature.InstanceOfAssignableTest;
 import com.lixiangers.androidresearch.feature.LambdaActivity;
@@ -61,7 +62,9 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.study_touch, R.string.study_touch,
                     StudyTouchActivity.class),
             new DemoDetails(R.string.screen_orientation, R.string.screen_orientation,
-                    ScreenOrientationTestActivity.class)
+                    ScreenOrientationTestActivity.class),
+            new DemoDetails(R.string.future_task, R.string.future_task,
+                    FutureTaskActivity.class)
     };
 
     @Override
