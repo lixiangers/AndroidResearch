@@ -90,6 +90,10 @@
             android:name=".feature.FutureTaskActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".feature.HexActivity"
+            android:screenOrientation="portrait" />
+
         <service
             android:name=".service.AIDLService"
             android:process=":aidlservice">

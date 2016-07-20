@@ -14,6 +14,7 @@ import com.lixiangers.androidresearch.feature.AIDLActivity;
 import com.lixiangers.androidresearch.feature.CopyOnWriteArrayListActivity;
 import com.lixiangers.androidresearch.feature.FutureTaskActivity;
 import com.lixiangers.androidresearch.feature.GrayForegroundServiceActivity;
+import com.lixiangers.androidresearch.feature.HexActivity;
 import com.lixiangers.androidresearch.feature.InstanceOfAssignableTest;
 import com.lixiangers.androidresearch.feature.LambdaActivity;
 import com.lixiangers.androidresearch.feature.NDKTestActivity;
@@ -64,7 +65,9 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.screen_orientation, R.string.screen_orientation,
                     ScreenOrientationTestActivity.class),
             new DemoDetails(R.string.future_task, R.string.future_task,
-                    FutureTaskActivity.class)
+                    FutureTaskActivity.class),
+            new DemoDetails(R.string.hex, R.string.hex,
+                    HexActivity.class)
     };
 
     @Override
