@@ -21,4 +21,5 @@
     <string name="screen_orientation">屏幕方向生命周期</string>
     <string name="future_task">带返回值的多线程</string>
     <string name="hex">16进制</string>
+    <string name="application">Application 不能存放数据会Crash</string>
 </resources>

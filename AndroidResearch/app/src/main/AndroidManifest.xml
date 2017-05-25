@@ -94,6 +94,10 @@
             android:name=".feature.HexActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".feature.VerifyApplicationCannotSaveData"
+            android:screenOrientation="portrait" />
+
         <service
             android:name=".service.AIDLService"
             android:process=":aidlservice">

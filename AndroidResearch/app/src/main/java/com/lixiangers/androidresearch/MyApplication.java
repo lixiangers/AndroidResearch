@@ -7,6 +7,7 @@ import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.alipay.euler.andfix.patch.PatchManager;
+import com.lixiangers.androidresearch.feature.VerifyApplicationCannotSaveData;
 
 import java.io.IOException;
 
@@ -14,10 +15,15 @@ public class MyApplication extends Application {
     //    private PatchManager patchManager;
     private static final String APATCH_PATH = "/out.apatch";
     private PatchManager patchManager;
+    public String name;
+    public static MyApplication instance;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        Log.d(VerifyApplicationCannotSaveData.TAG, "MyApplication onCreate:"+this.toString());
+
+        instance=this;
         patchManager = new PatchManager(this);
         patchManager.init("2.0");
         // load patch
@@ -37,5 +43,9 @@ public class MyApplication extends Application {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
+    }
+
+    public static MyApplication getInstance() {
+        return instance;
     }
 }

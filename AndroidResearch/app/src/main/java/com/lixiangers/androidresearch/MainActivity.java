@@ -3,6 +3,7 @@ package com.lixiangers.androidresearch;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -25,6 +26,7 @@ import com.lixiangers.androidresearch.feature.TestEmptyViewActivity;
 import com.lixiangers.androidresearch.feature.TestLauncherModeActivity;
 import com.lixiangers.androidresearch.feature.ThreadLocalTestActivity;
 import com.lixiangers.androidresearch.feature.TransientKeyWordActivity;
+import com.lixiangers.androidresearch.feature.VerifyApplicationCannotSaveData;
 import com.lixiangers.androidresearch.touchstudy.StudyTouchActivity;
 
 
@@ -67,17 +69,21 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.future_task, R.string.future_task,
                     FutureTaskActivity.class),
             new DemoDetails(R.string.hex, R.string.hex,
-                    HexActivity.class)
+                    HexActivity.class),
+            new DemoDetails(R.string.application, R.string.application,
+                    VerifyApplicationCannotSaveData.class)
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d(VerifyApplicationCannotSaveData.TAG, "MainActivity onCreate" + this.toString());
 
         ListAdapter adapter = new CustomArrayAdapter(
                 this.getApplicationContext(), demos);
         setListAdapter(adapter);
+        MyApplication.getInstance().name = "lixiang";
     }
 
     @Override

@@ -17,6 +17,10 @@ android {
         versionName "1.0"
         multiDexEnabled true
 
+//        jackOptions {
+//            enabled true
+//        }
+
         ndk {
             moduleName "NdkJniDemo"            //生成的so名字 libNdkJniDemo
             ldLibs "log", "z", "m"	//添加依赖库文件，因为有log打印等
@@ -64,8 +68,8 @@ dependencies {
 
 retrolambda {
     //指定java8的路径,因为我们项目还是使用Java7，而lambda需要java8。所以这里必须要指定Java8的路径，否则编译出错。
-    jdk System.getenv("JAVA8_HOME")
+//    jdk System.getenv("JAVA8_HOME")
     //默认就从环境变量中读取，可以不用单独设置。这里为了体现和上面jdk的区别。
-    oldJdk System.getenv("JAVA_HOME")
-    javaVersion JavaVersion.VERSION_1_7//设置retrolambda编译版本
+//    oldJdk System.getenv("JAVA_HOME")
+//    javaVersion JavaVersion.VERSION_1_7//设置retrolambda编译版本
 }
