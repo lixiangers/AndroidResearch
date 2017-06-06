@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: "android-apt"
+apply plugin: 'kotlin-android'
 
 //nuwa {
 //    debugOn = false
@@ -11,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.lixiangers.androidresearch"
-        minSdkVersion 10
+        minSdkVersion 14
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -23,7 +25,7 @@ android {
 
         ndk {
             moduleName "NdkJniDemo"            //生成的so名字 libNdkJniDemo
-            ldLibs "log", "z", "m"	//添加依赖库文件，因为有log打印等
+            ldLibs "log", "z", "m"    //添加依赖库文件，因为有log打印等
             abiFilters "armeabi", "x86"//输出指定abi体系结构下的so库。
         }
     }
@@ -64,6 +66,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.alipay.euler:andfix:0.4.0@aar'
     compile 'com.android.support:multidex:1.0.1'
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
 retrolambda {

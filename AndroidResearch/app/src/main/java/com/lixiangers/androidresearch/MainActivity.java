@@ -78,7 +78,7 @@ public class MainActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d(VerifyApplicationCannotSaveData.TAG, "MainActivity onCreate" + this.toString());
+        Log.d(VerifyApplicationCannotSaveData.TestCompanion.getTAG(), "MainActivity onCreate" + this.toString());
 
         ListAdapter adapter = new CustomArrayAdapter(
                 this.getApplicationContext(), demos);

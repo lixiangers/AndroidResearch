@@ -21,7 +21,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d(VerifyApplicationCannotSaveData.TAG, "MyApplication onCreate:"+this.toString());
+        Log.d(VerifyApplicationCannotSaveData.TestCompanion.getTAG(), "MyApplication onCreate:"+this.toString());
 
         instance=this;
         patchManager = new PatchManager(this);
