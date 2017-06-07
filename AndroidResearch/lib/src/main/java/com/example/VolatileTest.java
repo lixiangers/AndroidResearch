@@ -3,7 +3,10 @@ package com.example;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 
+
 /**
+ * 参考资料：http://www.importnew.com/18126.html
+ *
  * 可见性：多个线程访问同一个变量的时候，一个线程修改了变量的值，会立即保存到主内存中，其他线程能够立即
  * 看到修改的值
  * 原子性：一个操作或者多个操作，要么全部执行，要么都不执行。
