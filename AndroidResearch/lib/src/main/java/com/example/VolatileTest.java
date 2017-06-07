@@ -6,16 +6,31 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 参考资料：http://www.importnew.com/18126.html
- *
+ * <p>
  * 可见性：多个线程访问同一个变量的时候，一个线程修改了变量的值，会立即保存到主内存中，其他线程能够立即
  * 看到修改的值
- * 原子性：一个操作或者多个操作，要么全部执行，要么都不执行。
+ * 原子性：一个操作或者多个操作，要么全部执行并且不会被中断，要么都不执行。
+ * 有序性：程序的执行时按照代码的顺序执行（java会对代码进行优化，可能会改变代码的执行顺序）
+ * <p>
+ * <p>
+ * <p>
  * <p>
  * Volatile:
  * 1.Volatile关键字会强制将修改的值立即写入主存
  * 2.当线程2修改Volatile修饰的变量的时候，会是线程1的工作内存中缓存变量的失效（
  * 反应到硬件层的话，即使CPU的L1或者L2缓存中对应的缓存行无效）
  * 3.线程1的工作内存缓存的变量无效时候，就需要到主内存中读取最新的值
+ * 4.保证一定的顺序行（对volatile变量进行读写的时候时，它之前的代码肯定已经执行，它之后的代码肯定还没有执行）
+ * //x、y为非volatile变量
+ * //flag为volatile变量
+ * <p>
+ * x = 2;        //语句1
+ * y = 0;        //语句2
+ * flag = true;  //语句3
+ * x = 4;         //语句4
+ * y = -1;       //语句5
+ * 语句1,2肯定会在语句3之前执行，但是语句1,语句2的顺序无法保证。
+ * 语句4,5肯定会在语句3之后执行，但是语句4,语句5的顺序无法保证
  */
 public class VolatileTest {
 
@@ -109,6 +124,10 @@ public class VolatileTest {
          * java.util.concurrent.atomic提供了一些原子的操作类，即对基本数据类型的自增，
          * 自减，加法，减法操作进行了封装，保证了这些操作的原子性。atomic利用CAS(Compare And Swap)来实现
          * 原子性操作
+         * <p>
+         * count的读取和修改是一起执行，不会被中断
+         * <p>
+         * CAS 是利用CPU 的硬件命令(CMPXCHG命令)保证原子性
          */
 
         public AtomicInteger count = new AtomicInteger();
