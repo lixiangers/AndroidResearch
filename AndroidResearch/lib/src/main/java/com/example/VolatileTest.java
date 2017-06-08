@@ -138,6 +138,10 @@ public class VolatileTest {
          * count的读取和修改是一起执行，不会被中断
          * <p>
          * CAS 是利用CPU 的硬件命令(CMPXCHG命令)保证原子性
+         * Compare and swap : 三个操作值（内存值、旧的预期值、要更新的值）
+         * 当且预期值和内存值一样的时候将内存值修改为新的值返回True，否则False
+         * AtomicInteger就是根据依据这个CAS，如果当时CAS失败，就重新获取最新的值，再进行更新。
+         *
          */
 
         public AtomicInteger count = new AtomicInteger();
