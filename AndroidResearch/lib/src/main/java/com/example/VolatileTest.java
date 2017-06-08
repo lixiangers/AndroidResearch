@@ -41,7 +41,7 @@ public class VolatileTest {
 //        IncreaseWithLock volatileTest = new IncreaseWithLock();
         IncreaseWithAtomic volatileTest = new IncreaseWithAtomic();
         long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             new Thread() {
                 @Override
                 public void run() {
@@ -90,7 +90,8 @@ public class VolatileTest {
     public static class IncreaseWithSynchronized {
         /**
          * synchronized 保存每次只有一个线程执行increase 方法，并且执行完后会把最新的值
-         * 写入到主内存中
+         * 写入到主内存中。synchronized保证只有一个线程执行完成后，其他线程才能够执行，并且执行完成后
+         * 立即把变量写入到主内存。保证了原子性和可见性
          */
 
         public int count = 0;
@@ -103,7 +104,8 @@ public class VolatileTest {
     public static class IncreaseWithLock {
         /**
          * ReentrantLock 保存每次只有一个线程执行increase 方法，并且执行完后会把最新的值
-         * 写入到主内存中
+         * 写入到主内存中。lock保证只有一个线程执行完成后，其他线程才能够执行，并且执行完成后
+         * 立即把变量写入到主内存。保证了原子性和可见性。
          */
 
         public int count = 0;
