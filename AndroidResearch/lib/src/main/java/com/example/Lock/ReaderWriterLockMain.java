@@ -32,5 +32,7 @@ public class ReaderWriterLockMain {
         pool.execute(u3);
         pool.execute(u4);
         pool.execute(u5);
+
+        pool.shutdown();
     }
 }
