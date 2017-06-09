@@ -1,4 +1,7 @@
-package com.example.Lock;
+package com.example;
+
+import com.example.Lock.MyCount;
+import com.example.Lock.User;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

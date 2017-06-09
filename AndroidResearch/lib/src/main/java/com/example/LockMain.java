@@ -1,5 +1,10 @@
-package com.example.Lock;
+package com.example;
 //synchronized reentrant
+
+import com.example.Lock.ILockBuffer;
+import com.example.Lock.ReadThread;
+import com.example.Lock.ReentrantILockBuffer;
+import com.example.Lock.WriteThread;
 
 import java.util.concurrent.locks.ReentrantLock;
 

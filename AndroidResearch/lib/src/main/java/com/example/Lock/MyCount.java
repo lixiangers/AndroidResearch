@@ -1,10 +1,10 @@
 package com.example.Lock;
 
-class MyCount {
+public class MyCount {
     private String oid;         //账号
     private int cash;             //账户余额
 
-    MyCount(String oid, int cash) {
+    public MyCount(String oid, int cash) {
         this.oid = oid;
         this.cash = cash;
     }

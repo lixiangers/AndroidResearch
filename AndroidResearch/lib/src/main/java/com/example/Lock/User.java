@@ -2,14 +2,14 @@ package com.example.Lock;
 
 import java.util.concurrent.locks.ReadWriteLock;
 
-class User implements Runnable {
+public class User implements Runnable {
     private String name;                 //用户名
     private MyCount myCount;         //所要操作的账户
     private int iocash;                 //操作的金额，当然有正负之分了
     private ReadWriteLock myLock;                 //执行操作所需的锁对象
     private boolean ischeck;         //是否查询
 
-    User(String name, MyCount myCount, int iocash, ReadWriteLock myLock, boolean ischeck) {
+    public User(String name, MyCount myCount, int iocash, ReadWriteLock myLock, boolean ischeck) {
         this.name = name;
         this.myCount = myCount;
         this.iocash = iocash;
