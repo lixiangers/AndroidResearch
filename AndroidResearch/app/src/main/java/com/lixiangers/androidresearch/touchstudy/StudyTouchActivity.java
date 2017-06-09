@@ -32,7 +32,7 @@ public class StudyTouchActivity extends Activity {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        boolean is = true;
+        boolean is = false;
         LogUtils.printLog(getClass(), "【开发经理】自己{处理}任务<%s>:连组长都不会，算了，这任务我还是自己来吧！" + is, event);
         return is;
     }

@@ -4,10 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 
 public class FirstFrameLayout extends FrameLayout {
 
@@ -24,7 +20,6 @@ public class FirstFrameLayout extends FrameLayout {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-
         boolean is = false;
         LogUtils.printLog(getClass(), "【开发组长】自己分派一任务<%s>:需要{拦截}吗？" + is, ev);
         return is;

@@ -2,7 +2,6 @@ package com.lixiangers.androidresearch.touchstudy;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
