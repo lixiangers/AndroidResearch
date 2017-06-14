@@ -21,7 +21,7 @@ import com.lixiangers.androidresearch.service.AIDLService;
  * 演示AIDL的使用 注意 linkToDeath unlinkToDeath 使用
  */
 public class AIDLActivity extends Activity {
-    private static final String TAG = "AIDLService";
+    public static final String TAG = "AIDLService";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,8 @@ public class AIDLActivity extends Activity {
     private ITestService mService;
     private ServiceConnection mConnection = new ServiceConnection() {
         public void onServiceConnected(ComponentName className, IBinder service) {
-            Log.d(TAG, "connect service");
+            //这里获取的是IBinder Proxy
+            Log.d(TAG, "connect service:" + service.toString());
             mService = ITestService.Stub.asInterface(service);
             try {
                 service.linkToDeath(mGrayBinderDeathRecipient, 0);

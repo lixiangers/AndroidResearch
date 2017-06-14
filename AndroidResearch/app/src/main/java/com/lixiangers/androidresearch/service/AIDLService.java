@@ -11,6 +11,7 @@ import android.util.Log;
 
 import com.lixiangers.androidresearch.aidl.ITestService;
 import com.lixiangers.androidresearch.aidl.Person;
+import com.lixiangers.androidresearch.feature.AIDLActivity;
 
 /**
  * 灰色保活，这种保活手段是应用范围最广泛。它是利用系统的漏洞来启动一个前台的Service进程，
@@ -19,8 +20,8 @@ import com.lixiangers.androidresearch.aidl.Person;
  * 那么如何利用系统的漏洞呢，大致的实现思路和代码如下：
  * 思路一：API < 18，启动前台Service时直接传入new Notification()；
  * 思路二：API >= 18，同时启动两个id相同的前台Service，然后再将后启动的Service做stop处理；
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * dumpsys activity services PackageName
  * 打印出指定包名的所有进程中的Service信息，看下有没有 isForeground=true 的关键信息。
  * 如果通知栏没有看到属于App的 Notification 且又看到 isForeground=true 则说明了，此App利用了这种灰色保活的手段。微信、QQ、支付宝、陌陌
@@ -89,7 +90,7 @@ public class AIDLService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        Log("service onBind");
+        Log.d(AIDLActivity.TAG, "service onBind:" + mBinder.toString());
         return mBinder;
     }
 
