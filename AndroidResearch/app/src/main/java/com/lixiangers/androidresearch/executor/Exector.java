@@ -31,11 +31,10 @@ public class Exector {
 //            System.out.println("task运行结果" + submit.get());
 
             //2.第二种获取结果方式
-            System.out.println("task运行结果" + futureTask.get());
+//            System.out.println("task运行结果" + futureTask.get());
 
             //3.第三种获取结果方式
             System.out.println("task运行结果" + submit.get());
-
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
