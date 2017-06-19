@@ -22,4 +22,5 @@
     <string name="future_task">带返回值的多线程</string>
     <string name="hex">16进制</string>
     <string name="application">Application 不能存放数据会Crash</string>
+    <string name="lifeCycle">Activity/Fragment 生命周期</string>
 </resources>

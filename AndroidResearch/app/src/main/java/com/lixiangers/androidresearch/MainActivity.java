@@ -18,6 +18,7 @@ import com.lixiangers.androidresearch.feature.GrayForegroundServiceActivity;
 import com.lixiangers.androidresearch.feature.HexActivity;
 import com.lixiangers.androidresearch.feature.InstanceOfAssignableTest;
 import com.lixiangers.androidresearch.feature.LambdaActivity;
+import com.lixiangers.androidresearch.feature.LifeCycleActivity1;
 import com.lixiangers.androidresearch.feature.NDKTestActivity;
 import com.lixiangers.androidresearch.feature.PhoneNumberActivity;
 import com.lixiangers.androidresearch.feature.ScreenOrientationTestActivity;
@@ -71,7 +72,9 @@ public class MainActivity extends ListActivity {
             new DemoDetails(R.string.hex, R.string.hex,
                     HexActivity.class),
             new DemoDetails(R.string.application, R.string.application,
-                    VerifyApplicationCannotSaveData.class)
+                    VerifyApplicationCannotSaveData.class),
+            new DemoDetails(R.string.lifeCycle, R.string.lifeCycle,
+                    LifeCycleActivity1.class)
     };
 
     @Override
