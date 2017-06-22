@@ -13,6 +13,8 @@ import com.lixiangers.androidresearch.R;
  * Activity 生命周期
  * 1. 调转的时候，先执行Activity2 onResume 再执行Activity onStop
  * 2. activity show activity 的时候 不会执行任何生命周期方法
+ * <p>
+ * android:noHistory Activity 栈不保留Activity。测试发现A->B的时候，如果onHistory=true 的时候A会destroy
  */
 public class LifeCycleActivity1 extends Activity implements View.OnClickListener {
 
